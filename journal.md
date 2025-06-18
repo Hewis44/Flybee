@@ -6,11 +6,11 @@ created_at: "2025-06-19"
 Total time spent: 2 Days (~8-10 hours)
 ---
 
-## 📅 Day 1 – Design, Modelling & Initial CFD (~5 hours)
+## Day 1 – Design, Modelling & Initial CFD (~5 hours)
 
 So yeah, this whole thing started with a simple idea — to make a cool fixed-wing plane that can lift good weight but still be light and easy to carry. I wanted something that works well, flies smooth, and isn’t a pain to assemble. Once I had the goal in mind, I just jumped into it step by step planning the design, picking the parts, and figuring out how to actually build it all.
 
-### ✏️ Step 1: Planning the Design & Frame Style
+### ✏Step 1: Planning the Design & Frame Style
 
 I started with a rough sketch to lock down priorities: modularity, weight balance, lift, and simplicity. I chose a **high-wing** layout and **tractor propeller configuration** for better airflow and natural stability. Then I started modelling the **fuselage**.
 
@@ -41,7 +41,7 @@ I made a solid version of the wing for CFD:
 
 ---
 
-## 📅 Day 2 – Tail Design, Final CFD, and Autonomy Prep (~5 hours)
+##  Day 2– Tail Design, Final CFD, and Autonomy Prep (~5 hours)
 
 Started the day with **V-tail design**. Used two angled stabilizers at 110°, surface area was 70% of conventional H-tail to save weight.
 
@@ -78,7 +78,7 @@ Selected GOE225 for its:
 
 ---
 
-### 🔧 Avionics & Autonomy Setup
+### Avionics & Autonomy Setup
 
 Started placing electronics and picking flight gear:
 
