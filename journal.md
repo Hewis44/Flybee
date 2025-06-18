@@ -90,5 +90,9 @@ Going fully autonomous — added:
 - **433 MHz telemetry**
 
 Planning to flash **ArduPilot** and program waypoint missions soon. Next steps: install in frame, test with Mission Planner, and do ground test + maiden auto flight.
+im gonna Add BOM,sketches and laser cutting files in the repo
+
+
+## Build ( coming soon)
 
 ---
