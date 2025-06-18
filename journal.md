@@ -24,7 +24,6 @@ This was one of the most critical parts. I picked three airfoils to study: GOE22
 ![image](https://github.com/user-attachments/assets/1c8f1cb4-a696-4966-baf2-9564db4b7d6c)
 ![image](https://github.com/user-attachments/assets/8b23e1f0-a2b2-4cf2-be4e-a2f05a0338f4)
 
-GOE225 was the final choice because it gave the best mix of high lift, lower drag, and gradual stall characteristics. It has a 7.6% camber at 40% chord, which is good for high lift. It’s also easier to fabricate compared to S1223, which has a more fragile trailing edge. With GOE225, I got lift values up to 37.26 N in the full body CFD at 4 degrees AoA, which is more than enough to lift the 2 kg payload and rest of the plane.
 
 ![image](https://github.com/user-attachments/assets/e0b917cf-3697-41c9-8dde-3b15ccf0d585)
 ![image](https://github.com/user-attachments/assets/2db8c3ca-ed08-4084-a509-3fc16c605354)
@@ -32,7 +31,6 @@ GOE225 was the final choice because it gave the best mix of high lift, lower dra
 
 
 Now That i know GOE225 is the best wing design i started modelling it
-
 
 ![image](https://github.com/user-attachments/assets/89856658-af8e-43d7-b7a6-b5f17453f8a8)
 
@@ -43,7 +41,18 @@ This is the assembled wing:
 ![image](https://github.com/user-attachments/assets/d7f7170b-0eef-4ba6-9ded-cecd61ae6b9b)
 
 These are the spars to assemble the wing:
+
+
 ![image](https://github.com/user-attachments/assets/3208263f-8a2f-4060-a461-cb59042ce33f)
+
+
+
+
+These are the aelirons for wing:
+
+
+![image](https://github.com/user-attachments/assets/f7a5e7ac-ce0e-44b6-8482-32931f93962b)
+
 
 I made a solid one for cfd
 
@@ -57,7 +66,65 @@ The V-tail was created using two tail surfaces set at a calculated angle of 110 
 I made a solid one for cfd too
 
 
+
 ![image](https://github.com/user-attachments/assets/9ad913cc-3cf6-4f16-a524-fd5dca456465)
+
+
+
+I assembled servos on Tail:
+
+
+![image](https://github.com/user-attachments/assets/725007fe-c253-4ebf-ace6-f23807e630e8)
+
+
+
+Final assembly:
+
+
+
+![image](https://github.com/user-attachments/assets/e82674e9-f814-4d14-94f0-454af5cca70f)
+
+
+This is for cfd:
+![image](https://github.com/user-attachments/assets/43e8a1ce-dfc1-4dac-8794-e8771c86d0ec)
+
+CFD:
+
+![image](https://github.com/user-attachments/assets/e306804c-a240-442c-8784-0946bb24982a)
+
+
+![image](https://github.com/user-attachments/assets/7af9e95d-f0b9-4a35-abd7-f7cdf57e013b)
+
+
+
+![image](https://github.com/user-attachments/assets/3d59e1f2-b964-48e8-8485-21ce659d24e6)
+
+
+
+![image](https://github.com/user-attachments/assets/5611e62e-dd8f-455a-9652-456b837036b2)
+
+FULL body CFD:
+
+
+
+![image](https://github.com/user-attachments/assets/ba557577-9a38-43b3-9977-3992a43c132f)
+
+
+
+
+
+GOE225 was the final choice because it gave the best mix of high lift, lower drag, and gradual stall characteristics. It has a 7.6% camber at 40% chord, which is good for high lift. It’s also easier to fabricate compared to S1223, which has a more fragile trailing edge. With GOE225, I got lift values up to 37.26 N in the full body CFD at 4 degrees AoA, which is more than enough to lift the 2 kg payload and rest of the plane.The CFD simulations further confirmed the aerodynamic efficiency of the GOE225 airfoil and the overall design. At an angle of attack of 4°, the wing alone produced 28.58 N of lift and 2.03 N of drag, indicating a solid lift-to-drag ratio for cruising performance. When the full aircraft was simulated in the same conditions, the lift increased to 37.26 N with 3.61 N of drag. The pressure contours showed smooth gradients across the upper and lower surfaces of the wing, suggesting no flow separation and a strong pressure differential to support stable lift. Most of the high-pressure zones were located near the wing root, tapering off towards the tip, which was expected due to tip vortices. Overall, the CFD validated that the aircraft could generate more lift than its own weight, ensuring a safe margin even during slow-speed operations.
+
+
+Components selection and avionics:
+![image](https://github.com/user-attachments/assets/1cb3ff6d-ff6e-4196-85e7-1c82593e7d9e)
+
+
+Im making this autonoumous so i added a flight controller,gps and telemetry
+
+im gonna program this on Ardupilot
+
+
 
 
 
