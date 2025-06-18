@@ -10,7 +10,7 @@ Total time spent: 2 Days (~8-10 hours)
 
 So yeah, this whole thing started with a simple idea — to make a cool fixed-wing plane that can lift good weight but still be light and easy to carry. I wanted something that works well, flies smooth, and isn’t a pain to assemble. Once I had the goal in mind, I just jumped into it step by step planning the design, picking the parts, and figuring out how to actually build it all.
 
-### ✏Step 1: Planning the Design & Frame Style
+### Step 1: Planning the Design & Frame Style
 
 I started with a rough sketch to lock down priorities: modularity, weight balance, lift, and simplicity. I chose a **high-wing** layout and **tractor propeller configuration** for better airflow and natural stability. Then I started modelling the **fuselage**.
 
