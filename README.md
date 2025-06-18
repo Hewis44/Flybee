@@ -5,6 +5,10 @@ Flybee is a lightweight, fully autonomous fixed-wing UAV designed and modeled fr
 
 This repository includes the final laser cutting files for the entire aircraft, including the wing ribs, fuselage sections, and tail surfaces. All files were exported directly from Fusion 360 after validating fit and alignment, and can be used directly with a laser cutter. The structure is meant to be built from lightweight balsa and aeroply materials, assembled using adhesives like Araldite and covered in Monokote or similar film for improved finish and durability.
 
+
+![Screenshot 2025-06-19 011056](https://github.com/user-attachments/assets/207d2889-4093-4902-bea2-a5c72f74eaf3)
+
+
 The autonomous system is based on a Pixhawk 2.4.8 flight controller with GPS and telemetry modules, allowing waypoint-based missions and return-to-launch capability using Mission Planner. While I’ve completed all structural and aerodynamic work, the flight testing and autopilot tuning are still ongoing. The design was developed as a compact and functional UAV that can be easily carried, repaired, and customized for different mission profiles.
 
 Only the laser cutting files are shared in this repo, but they represent the full design ready for fabrication. If you're interested in building a simple but powerful autonomous fixed-wing drone, feel free to use these files or modify them as needed.
