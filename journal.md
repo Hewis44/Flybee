@@ -1,7 +1,7 @@
 ---
-title: "A Fixed Wing Aircraft"
-author: "Hewis44"
-description: "UAV"
+Title: "A Fixed Wing Aircraft"
+Author: "Hewis44"
+Description: "UAV"
 created_at: "2025-06-19"
 Total time spent: 2 Days (~8-10 hours)
 ---
