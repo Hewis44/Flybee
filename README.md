@@ -14,4 +14,4 @@ The autonomous system is based on a Pixhawk 2.4.8 flight controller with GPS and
 Only the laser cutting files are shared in this repo, but they represent the full design ready for fabrication. If you're interested in building a simple but powerful autonomous fixed-wing drone, feel free to use these files or modify them as needed.
 
 
-Made for Highways by Hewis_lamilton aka chethan
+Made for Highways by Hewis_lamilton 
