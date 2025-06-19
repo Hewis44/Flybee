@@ -1,5 +1,5 @@
 Component,Model,Quantity,Unit Price (INR),Total Price (INR),Supplier
-Flight Controller,Pixhawk 2.4.8 Combo Kit,1,14787,14787,Robu.in
+Flight Controller,Pixhawk 2.4.8 Combo Kit,1,6000,6000,Robu.in
 GPS Module,Ublox Neo-M8N GPS + Compass,1,2120,2120,Robu.in
 Telemetry Module,433 MHz Telemetry (if not in combo),1,1000,1000,Robu.in
 Motor,T-Motor AS2820 1050KV,1,3199,3199,DRKStore.in
