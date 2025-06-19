@@ -1,7 +1,6 @@
 Component,Model,Quantity,Unit Price (INR),Total Price (INR),Supplier
 Flight Controller,Pixhawk 2.4.8 Combo Kit,1,7258,7258,Robu.in
 GPS Module,Ublox Neo-M8N GPS + Compass,1,2120,2120,Robu.in
-Telemetry Module,433 MHz Telemetry (if not in combo),1,1000,1000,Robu.in
 Motor,T-Motor AS2820 1050KV,1,3199,3199,DRKStore.in
 ESC,60A ESC (AT75A or similar),1,3500,3500,Robokits
 Battery,3S 3300mAh LiPo,1,2200,2200,Robu.in
@@ -13,4 +12,4 @@ Wing Material,Balsa + Birch Spars,1,1000,1000,Local Store
 Fuselage Material,Balsa + Aeroply,1,800,800,Local Store
 Covering,Monokote & Adhesives,1,1200,1200,Local Store
 Miscellaneous,"Glue, Hinges, Wires",1,500,500,Local Store
-,TOTAL,,,38206 ( $441.56),
+,TOTAL,,,28377 ( $327.2509),
