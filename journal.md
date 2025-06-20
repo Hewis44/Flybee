@@ -3,7 +3,7 @@ Title: "A Fixed Wing Aircraft"
 Author: "Hewis44"
 Description: "UAV"
 created_at: "2025-06-19"
-Total time spent: 2 Days (~8-10 hours)
+Total time spent: 2 Days (15-20hours)
 ---
 
 ## Day 1 – Design, Modelling & Initial CFD (~5 hours)
