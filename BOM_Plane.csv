@@ -1,15 +1,16 @@
-Component,Model,Quantity,Unit Price (INR),Total Price (INR),Supplier
-Flight Controller,Pixhawk 2.4.8 Combo Kit,1,7258,7258,Robu.in
-GPS Module,Ublox Neo-M8N GPS + Compass,1,2120,2120,Robu.in
-Motor,T-Motor AS2820 1050KV,1,3199,3199,DRKStore.in
-ESC,60A ESC (AT75A or similar),1,3500,3500,Robokits
-Battery,3S 3300mAh LiPo,1,2200,2200,Robu.in
-Propeller,13 inch Propeller,1,350,350,Robu.in
-Receiver,FlySky iA6B,1,1300,1300,Robu.in
-Transmitter,FlySky FS-i6,1,4200,4200,Robu.in
-Servos,MG90S Metal Gear,3,250,750,Robu.in
-Wing Material,Balsa + Birch Spars,1,1000,1000,Local Store
-Fuselage Material,Balsa + Aeroply,1,800,800,Local Store
-Covering,Monokote & Adhesives,1,1200,1200,Local Store
-Miscellaneous,"Glue, Hinges, Wires",1,500,500,Local Store
-,TOTAL,,,28377 ( $327.2509),
+| Component         | Model                       | Quantity | Unit Price (INR) | Total Price (INR) | USD Price (Approx) | Supplier    |
+| ----------------- | --------------------------- | -------- | ---------------- | ----------------- | ------------------ | ----------- |
+| Flight Controller | Pixhawk 2.4.8 Combo Kit     | 1        | 7258             | 7258              | \$83.66            | Robu.in     |
+| GPS Module        | Ublox Neo-M8N GPS + Compass | 1        | 2120             | 2120              | \$24.45            | Robu.in     |
+| Motor             | T-Motor AS2820 1050KV       | 1        | 3199             | 3199              | \$36.88            | DRKStore.in |
+| ESC               | 60A ESC (AT75A or similar)  | 1        | 3500             | 3500              | \$40.34            | Robokits    |
+| Battery           | 3S 3300mAh LiPo             | 1        | 2200             | 2200              | \$25.37            | Robu.in     |
+| Propeller         | 13 inch Propeller           | 1        | 350              | 350               | \$4.03             | Robu.in     |
+| Receiver          | FlySky iA6B                 | 1        | 1300             | 1300              | \$14.98            | Robu.in     |
+| Transmitter       | FlySky FS-i6                | 1        | 4200             | 4200              | \$48.41            | Robu.in     |
+| Servos            | MG90S Metal Gear            | 3        | 250              | 750               | \$8.64             | Robu.in     |
+| Wing Material     | Balsa + Birch Spars         | 1        | 1000             | 1000              | \$11.53            | Local Store |
+| Fuselage Material | Balsa + Aeroply             | 1        | 800              | 800               | \$9.22             | Local Store |
+| Covering          | Monokote & Adhesives        | 1        | 1200             | 1200              | \$13.83            | Local Store |
+| Miscellaneous     | Glue, Hinges, Wires         | 1        | 500              | 500               | \$5.76             | Local Store |
+| **TOTAL**         |                             |          |                  | **₹28,377**       | **\$327.25**       |             |
