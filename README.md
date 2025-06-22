@@ -7,6 +7,9 @@ I carefully compared multiple airfoils such as the S1223 and NACA4412 using CFD 
 ![Screenshot 2025-06-19 011056](https://github.com/user-attachments/assets/207d2889-4093-4902-bea2-a5c72f74eaf3)
 
 The structure is lightweight and strong enough for mid-range autonomous missions. I chose materials like balsa wood and aeroply because they’re easy to work with, locally available, and provide a good weight-to-strength ratio. Assembly was done using adhesives like Araldite and Fevicol Marine, and I used Monokote film to cover the airframe, giving it a polished look while also adding some resistance to moisture and wear. All these steps were carried out manually in a small home workshop setup, making this a purely DIY project from start to finish.
+![Screenshot 2025-06-19 011715](https://github.com/user-attachments/assets/887be61d-695a-4afe-8070-c3a9092114d7)
+![Screenshot 2025-06-19 011436](https://github.com/user-attachments/assets/3993db41-95e0-49fb-8194-2ae9e4ccc1bc)
+![Screenshot 2025-06-19 010255](https://github.com/user-attachments/assets/b4f3811b-5c4b-4524-9555-bc7038e6606e)
 
 On the electronics side, the UAV is powered by a Pixhawk 2.4.8 flight controller, along with a Ublox Neo-M8N GPS module, telemetry radios, and basic power distribution. The autopilot was configured using Mission Planner, which allows full waypoint missions, geofencing, and RTL (Return To Launch) features. I also used the FlySky FS-i6 transmitter and iA6B receiver for manual override and initial ground testing. The motor is a powerful T-Motor AS2820 1050KV paired with a 60A ESC and a 13-inch propeller, all running on a 3S 3300mAh LiPo battery. During development, I put a lot of effort into wire management and power distribution to keep the internals neat and reliable. The aircraft’s internal bay was designed to be modular so that future upgrades like camera gimbals or advanced sensors can be easily added.
 
