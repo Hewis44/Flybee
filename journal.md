@@ -82,7 +82,7 @@ Then the next image shows a close-up pressure contour at wing-root — basically
 Overall, this CFD phase taught me so much. From learning how to clean geometry, fix mesh errors, apply correct physics models like k-omega SST, and properly interpret the force outputs — every part was something new. I made many silly mistakes at first like assigning wrong inlet speed, forgetting to use symmetry plane, not applying inflation layers, etc. But by doing trial and error and watching those tutorials side by side, I slowly made my way. It’s honestly one of the most satisfying parts of this whole UAV build. Seeing the virtual airflow over a design you made yourself is such a good feeling. It made me realise how powerful CFD is, and now I’m even thinking of trying transient simulations and maybe propeller analysis next.
 
 
-### 15 JUNE: Planning the Design & Frame Style   ( TOOK WHOLE ETRNITY)-15-20 HOURS
+### 15 JUNE: Planning the Design & Frame Style   ( TOOK WHOLE ETRNITY)        -15-20 HOURS
 
 
 I started by scribbling a basic sketch of the UAV, mainly to fix what mattered most — modularity, lift, and weight balance. I knew from the start I wanted a high-wing design because it’s naturally more stable and gives better visibility for autopilot. I went for a tractor propeller setup, so airflow over the wing is smooth and undisturbed, especially important during takeoff. I began modelling the fuselage in Onshape — just a simple boxy design first, then slowly refined it to match internal space needs and weight distribution.
@@ -111,19 +111,11 @@ I made a solid version of the wing for CFD:
 
 ---
 
-##  Day 2– Tail Design, Final CFD, and Autonomy Prep 
+##  Tail Design, Final CFD, and Autonomy Prep 5 HOURS
 
 
 
 Today I spent time getting my wing and fuselage designs ready for laser cutting. I had to take the CAD models and then export all the ribs, spars, and other parts into DXF format. I remembered I had some leftover acrylic sheets from my old school robotics project, so I’m thinking to use those for the motor mounts and servo plates. Then I opened Fusion 360 and did a small stress simulation for fun, like just to see how much weight the wing can take. It showed that if each side handles around 20N, the spars need to be thick enough or maybe I’ll add a carbon tube in the middle just to be safe. Also tried checking how much the tail flexes under yaw movement, and it was not bad actually. I didn’t expect to enjoy this analysis part so much but once you start getting results it becomes addictive. I made a battery bay design also with a small hatch system, so I don’t have to open everything again and again. Hopefully next time I’ll start assembling the frame after I get the parts cut.
-
-
-
-
-
-
-
-
 
 Started the day with **V-tail design**. Used two angled stabilizers at 110°, surface area was 70% of conventional H-tail to save weight.
 
@@ -141,14 +133,6 @@ Then moved to **final assembly:**
 
 
 So today I just went all in with CFD stuff. Like, I wanted to really make sure that the airfoil I chose was actually the best, not just by reading somewhere but by seeing the actual data. I compared GOE225 with S1223 and NACA4412 again but this time I ran proper simulations using different angles of attack. I spent a lot of time learning how to set up the mesh properly, 'cause the accuracy depends a lot on that. I tried coarse mesh first but then realized results were not matching, so after trying mid and fine meshes, I figured mid was giving me a good balance of speed and detail. I also learned about turbulence models like k-omega SST and tried that. It gave pretty nice pressure and velocity plots. Honestly, seeing those color maps and streamlines felt satisfying. And finally, even after all the simulations, GOE225 still showed better performance overall, like higher lift and smoother pressure change. S1223 was good too, but it stalled quickly and the pressure difference was kind of too sharp. So yeah, this kind of confirmed that my choice was solid.
-
-
-
-
-
-
-
-
 
 
 
@@ -176,16 +160,16 @@ Selected GOE225 for its:
 
 ### Avionics & Autonomy Setup
 
-Started placing electronics and picking flight gear:
 
 ![Component Layout](https://github.com/user-attachments/assets/1cb3ff6d-ff6e-4196-85e7-1c82593e7d9e)
+For the avionics, I decided to go with a fully autonomous setup because I really wanted the aircraft to perform waypoint navigation without any manual control. So I started by placing the key components — a Pixhawk flight controller, Ublox GPS module, and a 433 MHz telemetry radio. Pixhawk is the brain of the UAV and supports advanced control algorithms. I chose it because it's open-source and works perfectly with ArduPilot, which I’m planning to flash onto it. The GPS module is needed for real-time location tracking, and it works hand-in-hand with the Pixhawk to handle autonomous missions. The 433 MHz telemetry module is for sending live data from the UAV to Mission Planner, which I’ll be using on my laptop during test flights.
+![image](https://github.com/user-attachments/assets/ecb29ae9-dda5-41de-b670-177673cf99a4)
+The layout of these components was done keeping in mind CG balance and vibration isolation. I’m planning to program basic waypoint missions using Mission Planner, where I’ll set takeoff, loiter, and return-to-home commands. After installation, I will do some ground tests like checking servo directions, GPS lock, and telemetry range. Once everything looks good, I’ll go for the maiden autonomous flight. This whole process is new for me, so I’m learning as I go from different YouTube tutorials and ArduPilot forums.
 
-Going fully autonomous — added:
-- **Pixhawk flight controller**
-- **Ublox GPS module**
-- **433 MHz telemetry**
 
-Planning to flash **ArduPilot** and program waypoint missions soon. Next steps: install in frame, test with Mission Planner, and do ground test + maiden auto flight.
+
+You can get all the documentations about pixhawk here:https://ardupilot.org/copter/docs/common-pixhawk-overview.html
+
 im gonna Add BOM,sketches and laser cutting files in the repo
 
 
