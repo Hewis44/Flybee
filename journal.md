@@ -3,12 +3,34 @@ Title: "A Fixed Wing Aircraft"
 Author: "Hewis44"
 Description: "UAV"
 created_at: "2025-06-19"
-Total time spent: 3 Days (15-20hours)
+Total time spent: 45 Hours
 ---
 
-## Day 1 – Design, Modelling & Initial CFD (~5 hours)
+## Day 1 – Design, Modelling & Initial CFD , Research
 
 So yeah, this whole thing started with a simple idea — to make a cool fixed-wing plane that can lift good weight but still be light and easy to carry. I wanted something that works well, flies smooth, and isn’t a pain to assemble. Once I had the goal in mind, I just jumped into it step by step planning the design, picking the parts, and figuring out how to actually build it all.
+
+
+
+
+This day I decided not to build or test anything physical but to just understand the complete workflow properly and write it down for my repo. Like, how to take a CAD model, prepare it for CFD, do meshing, set flow boundary, and analyze results. I followed some tutorials online and also messed up a couple of times in SimScale but slowly got the hang of it. Exporting the model from Onshape, importing to SimScale, setting airspeed, and all that felt like a long process at first, but after 2–3 tries it started making sense. I got better at understanding what those pressure plots actually mean and how to read drag and lift values properly. I also explored how stall angle changes with airfoil shape and wing loading. It was a lot of learning, like real nerd stuff, but now I feel much more confident about how CFD works and how I can trust the values I’m getting. I’m gonna add a proper tutorial markdown in my repo too later so that anyone else can learn from it without going through all this confusion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Step 1: Planning the Design & Frame Style
 
@@ -41,7 +63,19 @@ I made a solid version of the wing for CFD:
 
 ---
 
-##  Day 2– Tail Design, Final CFD, and Autonomy Prep (~5 hours)
+##  Day 2– Tail Design, Final CFD, and Autonomy Prep 
+
+
+
+Today I spent time getting my wing and fuselage designs ready for laser cutting. I had to take the CAD models and then export all the ribs, spars, and other parts into DXF format. I remembered I had some leftover acrylic sheets from my old school robotics project, so I’m thinking to use those for the motor mounts and servo plates. Then I opened Fusion 360 and did a small stress simulation for fun, like just to see how much weight the wing can take. It showed that if each side handles around 20N, the spars need to be thick enough or maybe I’ll add a carbon tube in the middle just to be safe. Also tried checking how much the tail flexes under yaw movement, and it was not bad actually. I didn’t expect to enjoy this analysis part so much but once you start getting results it becomes addictive. I made a battery bay design also with a small hatch system, so I don’t have to open everything again and again. Hopefully next time I’ll start assembling the frame after I get the parts cut.
+
+
+
+
+
+
+
+
 
 Started the day with **V-tail design**. Used two angled stabilizers at 110°, surface area was 70% of conventional H-tail to save weight.
 
@@ -55,6 +89,20 @@ Mounted **servos on tail** and aligned pushrod paths.
 Then moved to **final assembly:**
 
 ![Full Assembly](https://github.com/user-attachments/assets/e82674e9-f814-4d14-94f0-454af5cca70f)
+
+
+
+So today I just went all in with CFD stuff. Like, I wanted to really make sure that the airfoil I chose was actually the best, not just by reading somewhere but by seeing the actual data. I compared GOE225 with S1223 and NACA4412 again but this time I ran proper simulations using different angles of attack. I spent a lot of time learning how to set up the mesh properly, 'cause the accuracy depends a lot on that. I tried coarse mesh first but then realized results were not matching, so after trying mid and fine meshes, I figured mid was giving me a good balance of speed and detail. I also learned about turbulence models like k-omega SST and tried that. It gave pretty nice pressure and velocity plots. Honestly, seeing those color maps and streamlines felt satisfying. And finally, even after all the simulations, GOE225 still showed better performance overall, like higher lift and smoother pressure change. S1223 was good too, but it stalled quickly and the pressure difference was kind of too sharp. So yeah, this kind of confirmed that my choice was solid.
+
+
+
+
+
+
+
+
+
+
 
 Ran **full body CFD** on wing + fuselage + tail.
 
