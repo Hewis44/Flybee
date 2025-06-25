@@ -13,12 +13,6 @@ So yeah, this whole thing started with a simple idea — to make a cool fixed-wi
 
 
 
-
-This day I decided not to build or test anything physical but to just understand the complete workflow properly and write it down for my repo. Like, how to take a CAD model, prepare it for CFD, do meshing, set flow boundary, and analyze results. I followed some tutorials online and also messed up a couple of times in SimScale but slowly got the hang of it. Exporting the model from Onshape, importing to SimScale, setting airspeed, and all that felt like a long process at first, but after 2–3 tries it started making sense. I got better at understanding what those pressure plots actually mean and how to read drag and lift values properly. I also explored how stall angle changes with airfoil shape and wing loading. It was a lot of learning, like real nerd stuff, but now I feel much more confident about how CFD works and how I can trust the values I’m getting. I’m gonna add a proper tutorial markdown in my repo too later so that anyone else can learn from it without going through all this confusion.
-
-
-
-
 ![image](https://github.com/user-attachments/assets/cb4e9a28-a517-455f-a758-8aead2b5cbb3)
 
 
@@ -35,51 +29,6 @@ Follow this playlist For learning ansys:https://youtube.com/playlist?list=PLykAN
 
 
 Then came the CFD part, and man, it was a different level. I decided to use ANSYS Fluent for the simulations because it gives very detailed results, and I wanted to check lift and drag values accurately. But ANSYS looked very pro-level in the beginning, and it took me a full day just to understand what a boundary condition is. I started slow by watching videos on channels like LearnCAx, CAx Tutorials, and SimuTech Group. These channels go step-by-step, like first they show how to import geometry (I exported my wing as a STEP file from Onshape), then how to clean up the model in ANSYS SpaceClaim, and then how to create mesh, apply freestream conditions, and finally simulate. At first I was just copying whatever they were doing, but after a while I started understanding why they were using k-omega SST model and how the mesh refinement near the surface actually affects the boundary layer results. One of the most useful parts was learning how to run an AoA sweep and see how the lift changes at each angle. That’s how I confirmed that GOE225 airfoil was giving more lift and better stall behaviour than others I tested. Also learned how to generate those nice colorful contour plots showing pressure and velocity lines. The simulation part honestly felt very satisfying when I saw the air flow properly over my wing, and no weird flow separations. If I had not followed those YouTube tutorials, especially from LearnCAx and SimuTech Group, I don’t think I could’ve figured it out on my own. So yeah, a big chunk of this project was basically me learning from YouTube and then applying it directly to my own design. Pure desi jugaad style learning, but it worked.
-
-
-These were my learnings and some flaws,mistakes i did while modelling this plane:
-
-
-![IMG-20250307-WA0043](https://github.com/user-attachments/assets/b3c95c86-7bfa-42f8-82f5-1e99955f22a4)
-
-
-
-The first image (the one with the circular patterns) shows the pressure field with vector lines from the front view. I used this to understand how the flow gets disturbed around the wing tips and how pressure behaves symmetrically across both wings. You can see those big swirling circles — those are basically vortices forming at the tips due to pressure difference from top and bottom of the wing. This was expected, but I was surprised how clean and uniform the pressure distribution was in the mid-section. That gave me confidence that the design isn’t creating sudden turbulence or separation zones in the middle part of the wing.
-
-
-
-Watched this video for understanding laminar Flow:
-![image](https://github.com/user-attachments/assets/b9d130a0-e586-4e42-8b31-87f30e2ad686)
-
-
-
-
-
-
-
-![IMG-20250307-WA0044](https://github.com/user-attachments/assets/c9c49a54-e6ae-43d6-91f5-068c6427b0a0)
-
-
-
-![IMG-20250307-WA0042](https://github.com/user-attachments/assets/b3737c52-c347-479e-a9f1-6ba34ac5a746)
-
-
-these are velocity streamlines over a side cut of the aircraft. Here I used a velocity inlet of 21.59 m/s and watched how air behaves over the GOE225 airfoil plus the fuselage. This result helped me see how the air smoothly accelerates over the curved upper surface of the wing and slows down below, which is exactly what creates lift. The greenish-blue area above the wing means higher velocity (low pressure), and the lower part has lower velocity (high pressure). One mistake I made here was not refining the mesh properly near the surface in my first try, because the results were looking very patchy. Then I increased the inflation layers and refined the near-wall mesh, and finally I got this smooth output. Also, in the third image which is a full-body side view, you can clearly see the velocity gradients around the whole aircraft — especially how the air slows near the tail. That’s something I didn’t consider during early design, so I’ll maybe lift the tail a bit upward in next revision to avoid airflow hitting directly.
-
-
-
-![IMG-20250307-WA0039](https://github.com/user-attachments/assets/7f659497-22bc-41d1-bb56-08e308d884e8)
-
-
-
-![IMG-20250307-WA0040](https://github.com/user-attachments/assets/275880bd-001b-4294-a2d0-e85b6ed8e1dc)
-
-
- the wing section with GOE225 airfoil that I modelled in Onshape. I used a proper spline-based profile and projected it across multiple ribs. Initially, I tried drawing it manually but the accuracy was off. Then I learned to use coordinates from airfoiltools.com and import those into Onshape sketch, and it made a big difference. This helped make a smooth, realistic wing and not just some random rounded shape.
-
-Then the next image shows a close-up pressure contour at wing-root — basically how the pressure is behaving where the wing joins the fuselage. I saw a strong red spot here which might indicate stress point or potential for structural fatigue, so I might reinforce this joint using carbon rods or laser-cut ply parts. This insight would’ve been missed if I didn’t simulate it properly.the last image is another pressure side view, showing again how pressure drops sharply above the wing and rises below it. Even though it looks very colourful, interpreting this helped me understand how smoothly GOE225 behaves at 4° angle of attack without sudden stall or flow separation.
-
-Overall, this CFD phase taught me so much. From learning how to clean geometry, fix mesh errors, apply correct physics models like k-omega SST, and properly interpret the force outputs — every part was something new. I made many silly mistakes at first like assigning wrong inlet speed, forgetting to use symmetry plane, not applying inflation layers, etc. But by doing trial and error and watching those tutorials side by side, I slowly made my way. It’s honestly one of the most satisfying parts of this whole UAV build. Seeing the virtual airflow over a design you made yourself is such a good feeling. It made me realise how powerful CFD is, and now I’m even thinking of trying transient simulations and maybe propeller analysis next.
 
 
 ### 15 JUNE: Planning the Design & Frame Style   ( TOOK WHOLE ETRNITY)        -15-20 HOURS
@@ -158,12 +107,87 @@ Selected GOE225 for its:
 
 ---
 
+
+These were my learnings and some flaws,mistakes i did while modelling this plane:
+
+
+![IMG-20250307-WA0043](https://github.com/user-attachments/assets/b3c95c86-7bfa-42f8-82f5-1e99955f22a4)
+
+
+
+The first image (the one with the circular patterns) shows the pressure field with vector lines from the front view. I used this to understand how the flow gets disturbed around the wing tips and how pressure behaves symmetrically across both wings. You can see those big swirling circles — those are basically vortices forming at the tips due to pressure difference from top and bottom of the wing. This was expected, but I was surprised how clean and uniform the pressure distribution was in the mid-section. That gave me confidence that the design isn’t creating sudden turbulence or separation zones in the middle part of the wing.
+
+
+
+Watched this video for understanding laminar Flow:
+![image](https://github.com/user-attachments/assets/b9d130a0-e586-4e42-8b31-87f30e2ad686)
+
+
+
+
+
+
+
+![IMG-20250307-WA0044](https://github.com/user-attachments/assets/c9c49a54-e6ae-43d6-91f5-068c6427b0a0)
+
+
+
+![IMG-20250307-WA0042](https://github.com/user-attachments/assets/b3737c52-c347-479e-a9f1-6ba34ac5a746)
+
+
+these are velocity streamlines over a side cut of the aircraft. Here I used a velocity inlet of 21.59 m/s and watched how air behaves over the GOE225 airfoil plus the fuselage. This result helped me see how the air smoothly accelerates over the curved upper surface of the wing and slows down below, which is exactly what creates lift. The greenish-blue area above the wing means higher velocity (low pressure), and the lower part has lower velocity (high pressure). One mistake I made here was not refining the mesh properly near the surface in my first try, because the results were looking very patchy. Then I increased the inflation layers and refined the near-wall mesh, and finally I got this smooth output. Also, in the third image which is a full-body side view, you can clearly see the velocity gradients around the whole aircraft — especially how the air slows near the tail. That’s something I didn’t consider during early design, so I’ll maybe lift the tail a bit upward in next revision to avoid airflow hitting directly.
+
+
+
+![IMG-20250307-WA0039](https://github.com/user-attachments/assets/7f659497-22bc-41d1-bb56-08e308d884e8)
+
+
+
+![IMG-20250307-WA0040](https://github.com/user-attachments/assets/275880bd-001b-4294-a2d0-e85b6ed8e1dc)
+
+
+ the wing section with GOE225 airfoil that I modelled in Onshape. I used a proper spline-based profile and projected it across multiple ribs. Initially, I tried drawing it manually but the accuracy was off. Then I learned to use coordinates from airfoiltools.com and import those into Onshape sketch, and it made a big difference. This helped make a smooth, realistic wing and not just some random rounded shape.
+
+Then the next image shows a close-up pressure contour at wing-root — basically how the pressure is behaving where the wing joins the fuselage. I saw a strong red spot here which might indicate stress point or potential for structural fatigue, so I might reinforce this joint using carbon rods or laser-cut ply parts. This insight would’ve been missed if I didn’t simulate it properly.the last image is another pressure side view, showing again how pressure drops sharply above the wing and rises below it. Even though it looks very colourful, interpreting this helped me understand how smoothly GOE225 behaves at 4° angle of attack without sudden stall or flow separation.
+
+Overall, this CFD phase taught me so much. From learning how to clean geometry, fix mesh errors, apply correct physics models like k-omega SST, and properly interpret the force outputs — every part was something new. I made many silly mistakes at first like assigning wrong inlet speed, forgetting to use symmetry plane, not applying inflation layers, etc. But by doing trial and error and watching those tutorials side by side, I slowly made my way. It’s honestly one of the most satisfying parts of this whole UAV build. Seeing the virtual airflow over a design you made yourself is such a good feeling. It made me realise how powerful CFD is, and now I’m even thinking of trying transient simulations and maybe propeller analysis next.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Avionics & Autonomy Setup
 
 
 ![Component Layout](https://github.com/user-attachments/assets/1cb3ff6d-ff6e-4196-85e7-1c82593e7d9e)
 For the avionics, I decided to go with a fully autonomous setup because I really wanted the aircraft to perform waypoint navigation without any manual control. So I started by placing the key components — a Pixhawk flight controller, Ublox GPS module, and a 433 MHz telemetry radio. Pixhawk is the brain of the UAV and supports advanced control algorithms. I chose it because it's open-source and works perfectly with ArduPilot, which I’m planning to flash onto it. The GPS module is needed for real-time location tracking, and it works hand-in-hand with the Pixhawk to handle autonomous missions. The 433 MHz telemetry module is for sending live data from the UAV to Mission Planner, which I’ll be using on my laptop during test flights.
+
+
+
+
 ![image](https://github.com/user-attachments/assets/ecb29ae9-dda5-41de-b670-177673cf99a4)
+
+
+
+
+
 The layout of these components was done keeping in mind CG balance and vibration isolation. I’m planning to program basic waypoint missions using Mission Planner, where I’ll set takeoff, loiter, and return-to-home commands. After installation, I will do some ground tests like checking servo directions, GPS lock, and telemetry range. Once everything looks good, I’ll go for the maiden autonomous flight. This whole process is new for me, so I’m learning as I go from different YouTube tutorials and ArduPilot forums.
 
 
