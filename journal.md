@@ -175,6 +175,11 @@ Overall, this CFD phase taught me so much. From learning how to clean geometry, 
 
 
 ![Component Layout](https://github.com/user-attachments/assets/1cb3ff6d-ff6e-4196-85e7-1c82593e7d9e)
+
+
+
+
+
 For the avionics, I decided to go with a fully autonomous setup because I really wanted the aircraft to perform waypoint navigation without any manual control. So I started by placing the key components — a Pixhawk flight controller, Ublox GPS module, and a 433 MHz telemetry radio. Pixhawk is the brain of the UAV and supports advanced control algorithms. I chose it because it's open-source and works perfectly with ArduPilot, which I’m planning to flash onto it. The GPS module is needed for real-time location tracking, and it works hand-in-hand with the Pixhawk to handle autonomous missions. The 433 MHz telemetry module is for sending live data from the UAV to Mission Planner, which I’ll be using on my laptop during test flights.
 
 
