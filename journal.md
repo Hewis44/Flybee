@@ -3,10 +3,10 @@ Title: "A Fixed Wing Aircraft"
 Author: "Hewis44"
 Description: "UAV"
 created_at: "2025-06-13"
-Total time spent: 45 Hours
+Total time spent: 48-50 Hours
 ---
 
-## Day 1, 13th JUNE – Design, Modelling & Initial CFD , Research ( 15 HOURS)
+## Day 1, 13th JUNE – Design, Modelling & Initial CFD , Research ( 15-20 HOURS)
 
 
 So yeah, this whole thing started with a simple idea — to make a cool fixed-wing plane that can lift good weight but still be light and easy to carry. I wanted something that works well, flies smooth, and isn’t a pain to assemble. Once I had the goal in mind, I just jumped into it step by step planning the design, picking the parts, and figuring out how to actually build it all.
@@ -31,7 +31,7 @@ Follow this playlist For learning ansys:https://youtube.com/playlist?list=PLykAN
 Then came the CFD part, and man, it was a different level. I decided to use ANSYS Fluent for the simulations because it gives very detailed results, and I wanted to check lift and drag values accurately. But ANSYS looked very pro-level in the beginning, and it took me a full day just to understand what a boundary condition is. I started slow by watching videos on channels like LearnCAx, CAx Tutorials, and SimuTech Group. These channels go step-by-step, like first they show how to import geometry (I exported my wing as a STEP file from Onshape), then how to clean up the model in ANSYS SpaceClaim, and then how to create mesh, apply freestream conditions, and finally simulate. At first I was just copying whatever they were doing, but after a while I started understanding why they were using k-omega SST model and how the mesh refinement near the surface actually affects the boundary layer results. One of the most useful parts was learning how to run an AoA sweep and see how the lift changes at each angle. That’s how I confirmed that GOE225 airfoil was giving more lift and better stall behaviour than others I tested. Also learned how to generate those nice colorful contour plots showing pressure and velocity lines. The simulation part honestly felt very satisfying when I saw the air flow properly over my wing, and no weird flow separations. If I had not followed those YouTube tutorials, especially from LearnCAx and SimuTech Group, I don’t think I could’ve figured it out on my own. So yeah, a big chunk of this project was basically me learning from YouTube and then applying it directly to my own design. Pure desi jugaad style learning, but it worked.
 
 
-### 15 JUNE: Planning the Design & Frame Style   ( TOOK WHOLE ETRNITY)        -15-20 HOURS
+### 15 JUNE: Planning the Design & Frame Style   ( TOOK WHOLE ETRNITY)        20 HOURS
 
 
 I started by scribbling a basic sketch of the UAV, mainly to fix what mattered most — modularity, lift, and weight balance. I knew from the start I wanted a high-wing design because it’s naturally more stable and gives better visibility for autopilot. I went for a tractor propeller setup, so airflow over the wing is smooth and undisturbed, especially important during takeoff. I began modelling the fuselage in Onshape — just a simple boxy design first, then slowly refined it to match internal space needs and weight distribution.
@@ -60,7 +60,7 @@ I made a solid version of the wing for CFD:
 
 ---
 
-##  Tail Design, Final CFD, and Autonomy Prep 5 HOURS
+##  Tail Design, Final CFD, and Autonomy Prep 10 HOURS
 
 
 
