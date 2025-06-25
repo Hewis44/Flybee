@@ -16,8 +16,6 @@ So yeah, this whole thing started with a simple idea — to make a cool fixed-wi
 ![image](https://github.com/user-attachments/assets/cb4e9a28-a517-455f-a758-8aead2b5cbb3)
 
 
-BANG BANG BANG
-
 
 ***Honestly Evryone Should try this***
 
